@@ -2,23 +2,25 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>My SVG Page</title>
+  <title>Scrollable SVG Canvas</title>
   <style>
-    body {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
+    html, body {
       margin: 0;
-      background: #f4f4f4;
+      padding: 0;
+      height: 100%;
+      overflow: auto;
     }
-    img {
-      max-width: 80%;
-      height: auto;
+    .svg-container {
+      width: max-content;
+      height: max-content;
+      min-width: 100vw;
+      min-height: 100vh;
     }
   </style>
 </head>
 <body>
-  <img src="image.svg" alt="My SVG">
+  <div class="svg-container">
+    <img src="image.svg" alt="My SVG">
+  </div>
 </body>
 </html>
